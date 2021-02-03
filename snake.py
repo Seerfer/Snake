@@ -76,3 +76,11 @@ class Snake:
             pos_y = self.segments[-1].ycor() + 20
         new_segment.goto(pos_x, pos_y)
         self.segments.append(new_segment)
+
+
+    def detect_tail_collision(self):
+        positions = [position.pos() for position in self.segments]
+        if positions[0] in positions[1:]:
+            return False
+        else:
+            return True
