@@ -25,26 +25,26 @@ class Snake:
         self.segments[0].forward(20)
 
     def turnup(self):
-        if self.current_way=="right":
-            self.current_way="up"
+        if self.current_way == "right":
+            self.current_way = "up"
             self.segments[0].left(90)
-        elif self.current_way=="left":
+        elif self.current_way == "left":
             self.current_way = "up"
             self.segments[0].right(90)
 
     def turndown(self):
-        if self.current_way=="right":
-            self.current_way="down"
+        if self.current_way == "right":
+            self.current_way = "down"
             self.segments[0].right(90)
-        elif self.current_way=="left":
+        elif self.current_way == "left":
             self.current_way = "down"
             self.segments[0].left(90)
 
     def turnright(self):
-        if self.current_way=="up":
-            self.current_way="right"
+        if self.current_way == "up":
+            self.current_way = "right"
             self.segments[0].right(90)
-        elif self.current_way=="down":
+        elif self.current_way == "down":
             self.current_way = "right"
             self.segments[0].left(90)
 
