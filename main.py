@@ -29,7 +29,7 @@ while game_is_on:
         scoreboard.increaseScore()
         food.relocate()
 
-    #Detect collision
+# Detect collision
     if snake.segments[0].xcor() > 400:
         game_is_on = False
     if snake.segments[0].ycor() > 400:
