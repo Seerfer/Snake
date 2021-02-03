@@ -77,7 +77,6 @@ class Snake:
         new_segment.goto(pos_x, pos_y)
         self.segments.append(new_segment)
 
-
     def detect_tail_collision(self):
         positions = [position.pos() for position in self.segments]
         if positions[0] in positions[1:]:
@@ -86,13 +85,13 @@ class Snake:
             return True
 
     def detect_wall_collision(self):
-        if self.segments[0].xcor() > 400:
+        if self.segments[0].xcor() > 390:
             return False
-        elif self.segments[0].ycor() > 400:
+        elif self.segments[0].ycor() > 390:
             return False
-        elif self.segments[0].xcor() < -400:
+        elif self.segments[0].xcor() < -390:
             return False
-        elif self.segments[0].ycor() < -400:
+        elif self.segments[0].ycor() < -390:
             return False
         else:
             return True
